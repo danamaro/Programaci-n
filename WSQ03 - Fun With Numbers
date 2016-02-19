@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main (){
+int d;
+int a;
+int Multiplicacion;
+int Division;
+int Residuo;
+int Resta;
+
+cout<<"Escriba un número entero:  ";
+cin>>d;
+cout<<"Escriba un segundo número entero:  ";
+cin>>a;
+Resta= d-a;
+cout<<"Resultado de la resta: "<<Resta<<endl;
+
+Multiplicacion= d*a;
+cout<<"Resultado de la multiplicación: "<<Multiplicacion<<endl;
+
+Division= (d)/(a);
+cout<<"Resultado de la división: "<<Division<<endl;
+Residuo= (d)%(a);
+cout<<"Residuo de la división: "<<Residuo<<endl;
+cout<<";o";
+
+}
