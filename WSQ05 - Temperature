@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main (){
+float F;
+
+float Celsius;
+cout<<"Temperatura en Fahrenheit: "; //cout sirve para que aparezca "Temperatura en Fahrenheit" en pantalla
+cin>>F;
+Celsius= 5*(F-32)/9;
+cout<<"Temperatura en Celsius: "<<Celsius<<endl;
+if (Celsius >= 100){
+  cout<< "El agua está hirviendo a esta temperatura";
+}
+else {
+  cout<< "El agua no está hirviendo a esta temperatura";
+}
+}
