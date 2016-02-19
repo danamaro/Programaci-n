@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main (){
+float DanielGuapo;
+float GuapoDaniel;
+float Multiplicacion;
+float Division;
+cout<<"Multiplicación :L"<<endl;
+cout<<"Escriba un número entero"<<endl;
+cin>>DanielGuapo;
+cout<<"Escriba un segundo número entero"<<endl;
+cin>>GuapoDaniel;
+Multiplicacion= DanielGuapo*GuapoDaniel;
+cout<<"Resultado de la multiplicación: "<<Multiplicacion<<endl;
+cout<<endl;
+cout<<endl;
+Division= (DanielGuapo)/(GuapoDaniel);
+cout<<"Resultado de la división: "<<Division<<endl;
+cout<<";o";
+
+}
