@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main (){
+int DanielGuapo;
+int GuapoDaniel;
+int Multiplicacion;
+int Division;
+int Residuo;
+cout<<"Multiplicación :L"<<endl;
+cout<<"Escriba un número entero"<<endl;
+cin>>DanielGuapo;
+cout<<"Escriba un segundo número entero"<<endl;
+cin>>GuapoDaniel;
+Multiplicacion= DanielGuapo*GuapoDaniel;
+cout<<"Resultado de la multiplicación: "<<Multiplicacion<<endl;
+cout<<endl;
+cout<<endl;
+Division= (DanielGuapo)/(GuapoDaniel);
+cout<<"Resultado de la división: "<<Division<<endl;
+Residuo= (DanielGuapo)%(GuapoDaniel);
+cout<<"Residuo de la división: "<<Residuo<<endl;
+cout<<";o";
+
+}
