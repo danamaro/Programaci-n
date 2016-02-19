@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main (){
+float Radio;
+float Altura;
+float Volumen;
+cout<<"Obtén el volumen de un cilindro"<<endl;
+cout<<"Escribe el radio (en decimales)"<<endl;
+cin>>Radio;
+cout<<"Escriba la altura (en decimales)"<<endl;
+cin>>Altura;
+Volumen= 3.1416*Radio*Radio*Altura;
+cout<<"Resultado del volumen: "<<Volumen<<endl;
+cout<<";o";
+
+}
