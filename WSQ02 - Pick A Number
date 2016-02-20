@@ -1,0 +1,31 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+int main (){
+int numero;
+srand (time (NULL));
+int x= rand () % 101;
+cout<<"Adivina un número del 1 al 100"<<endl;
+cin>>numero;
+while (numero!=x) //MIENTRAS EL NUMERO SEA DIFERENTE(!=) DE X(EL NUMERO QUE TIENES QUE ADIVINAR)
+{
+if (numero<x) //SI EL NUMERO QUE INGRESASTE ES MENOR QUE X
+{
+cout<<"El número es mayor del que ingresaste, Intenta de nuevo"<<endl;
+cin>>numero;
+}
+if (numero>x) //SI EL NUMERO QUE INGRESASTE ES MAYOR QUE X
+{
+cout<<"El número es menor del que ingresaste, Intenta de nuevo"<<endl;
+cin>>numero;
+}
+}
+if(numero=x) // SI EL NUMRO QUE INGRESASTE ES IGUAL A X
+{
+cout<<"Felicidades, acertaste el número"<<endl;
+}
+
+
+return 0;
+}
