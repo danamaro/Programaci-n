@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int elevar (int b, int p){
+int resultado=1;
+for (int i=1; i<=p; ++i)
+resultado= resultado*b;
+return resultado;
+}
+int main(){
+int base;
+int potencia;
+cout<<"Ingrese la base: ";
+cin>>base;
+cout<<"Ingrese la potencia: ";
+cin>>potencia;
+cout<<"Resultado: "<<elevar(base,potencia)<<endl;
+cout<<";o"<<endl;
+return 0;
+}
