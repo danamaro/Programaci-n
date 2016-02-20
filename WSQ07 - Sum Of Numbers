@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main(){
+  int a, b, s=0;
+  cout<<"De el rango"<<endl;
+  cout<<"Primer numero: ";
+  cin>>a;
+  cout<<"Segundo numero: ";
+  cin>>b;
+  while (a<=b)
+  {s=s+a;
+  a++;} //va aumentando de uno y uno partir de a hasta llegar a b
+  cout<<"La suma es: "<<s<<endl;
+}
