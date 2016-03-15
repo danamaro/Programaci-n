@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+long factorial (long n){
+  if (n==0){
+  return 1;
+  }
+  else {
+    long recurse = factorial(n-1);
+    long result = n*recurse;
+    return result;
+  }
+}
+
+int main()
+{
+  long n;
+  string opcion = "si";
+  while (opcion == "si") {
+  cout<<"Este programa realiza factoriales"<<endl;
+  cout<<"Escribe un número (entero): ";
+  cin>>n;
+  cout<<"Resultado: "<<factorial (n)<<endl;
+  cout<<"¿Quieres intentarlo otra vez? (si/no) ";
+  cin>>opcion;
+  if (opcion != "si"){
+    cout<<"Muchas gracias";
+  }
+
+  }
+
+  }
