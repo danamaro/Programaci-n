@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool is_palindrome(string n){     //bool retorna valores true/false
+return (n== string(n.rbegin(), n.rend()));         //va a contar la palabra de atras hacia adelante    <---------    //las compuradoras leen de derecha a izquierda, ejemplo daniel: mi begin es D y el de la comptadora es L
+
+}
+
+int main(){
+string n;
+cout<<"Este programa confirma palindromos"<<endl;
+cout<<"Escriba una palabra o frase que consideres(pienses) un palindromo: ";
+cin>>n;
+bool y= is_palindrome(n);   //y es el nombre del bool
+if(y== true) {
+cout<<"Es un palindromo"<<endl;
+}
+else {
+cout<<"No es un palindromo"<<endl;
+}
+return 0;
+}
