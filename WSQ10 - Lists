@@ -1,0 +1,42 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <numeric>
+#include <cmath>
+using namespace std;
+
+int main(){
+  vector <float> lista;
+  float n;
+  string seguir = "si";
+  while (seguir == "si"){
+    cout<<"Este programa te permite obtener suma, promedio y desviacion estandar"<<endl;
+    cout<<"Ingresa un numero: ";
+    cin>>n;
+    lista.push_back(n); //Se van a ir agregando vectores a la lista
+    cout<<"¿Desea agregar otro numero? (si/no): ";
+    cin>>seguir;
+}
+    float suma;
+    float promedio;
+    float desviacion;
+    float varianza;
+    cout<<"Estos son los numeros que seleccionaste: ";
+    for (float p=0; p<lista.size(); p++)            //genera numeros del 0 a la cantidad de valores dados
+    cout<<lista[p]<<", "<<endl;         //el vecto accede a esos elementos del loop   nombre del vector[variable del for]
+
+    cout<<"La suma es: ";
+    suma=accumulate(lista.begin(), lista.end(), 0.0);
+    cout<<suma<<endl;
+
+    cout<<"El promedio es: ";
+    promedio=(accumulate(lista.begin(), lista.end(), 0.0))/(lista.size());        //.size tamaño del vector (cantidad de elementos que hay)
+    cout<<promedio<<endl;
+
+    cout<<"La desviacion estandar es: ";
+    for(float p=0; p<lista.size(); p++)
+   varianza=varianza+pow((lista[p]-promedio), 2);
+   desviacion=sqrt((varianza)/(lista.size()));
+   cout<<desviacion<<endl;
+   return 0;
+  }
