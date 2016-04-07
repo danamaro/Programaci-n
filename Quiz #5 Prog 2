@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+#include <numeric>
+#include <string>
+using namespace std;
+
+int find_threes(vector<int>lista){                 //vector como parametro (vector: una variable donde se guardan varios elementos)
+int result=0;
+for(int i=0; i<lista.size(); i++){
+if(lista[i]%3==0){    //residuo 0     son divisibles entre 3       list[i] = acceder a los numeros que se ingresaron
+result = result + lista[i];
+}
+}
+return result;
+}
+
+int main(){
+int n;
+vector<int>lista;
+string seguir = "si";
+while (seguir == "si"){
+  cout<<"Este programa te permite obtener sumar numeros divisibles entre 3"<<endl;
+  cout<<"Ingresa un numero: ";
+  cin>>n;
+  lista.push_back(n); //Se van a ir agregando vectores a la lista (vector)
+  cout<<"¿Desea agregar otro numero? (si/no): ";
+  cin>>seguir;
+}
+cout<<"La suma es: " <<find_threes(lista)<<endl;
+}
