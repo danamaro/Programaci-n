@@ -1,0 +1,33 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+double factorial(int n){
+  double fact = 1;
+  for (int i = 1; i <= n; i++){
+  if (n==0){
+    return 1;
+  }
+  else {
+  fact = fact * i;
+  }
+}
+return fact;
+}
+float euler_calc (float ac){
+  float e = 1.0;
+  for (int i=1; i<999; i++){
+    e = e + 1/(factorial(i));
+  }
+  cout<< fixed <<setprecision(ac) << e;
+  return e;
+}
+int main(){
+  float ac;
+  cout<<"¿Con que presicion quieres tu numero? ";
+  cin>>ac;
+  cout<<"Aqui esta tu numero: "<<endl;
+ euler_calc(ac);
+ cout<<endl;
+  return 0;
+}
