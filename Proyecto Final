@@ -1,0 +1,516 @@
+#include <iostream>
+#define RESET   "\033[0m"
+#define BOLDRED     "\033[1m\033[31m"      /* Bold Red */
+#define BOLDBLUE    "\033[1m\033[34m"      /* Bold Blue */
+#define BOLDWHITE   "\033[1m\033[37m"      /* Bold White */
+
+using namespace std;
+
+int main(){
+  int Querer, Hotel = 0, Personas = 0, Habitaciones = 0, CostoHabitacion = 0, People = 0, TotalDesayuno = 0, Desayuno = 0, hotelito=0;
+  double Boletos=0, Costo = 0, CostoVuelo = 0, IngresosTotales=0, Suma=0, SumaBoletos=0 ;
+  do
+  {
+      cout<< BOLDWHITE <<"\nBievenido a la agencia de viajes 'Conoce el mundo', ¿Qué quiere consultar? \n 1- Vuelos \n 2- Hospedaje \n 3- Paquetes de comida \n 4- Subtotales\n 5- SALIR \n Opción: ";
+      cin>> Querer;
+      switch (Querer)
+      {
+          case 1:
+              int Respuesta, Resp, Cupon;
+              do
+              {
+                  cout<<BOLDWHITE<<"\n¿A qué destino quieres ir? \n 1- Nacional \n 2- Internacional \n 3- SALIR \n Opción: ";
+                  cin>>Resp;
+                  switch (Resp)
+                  {
+                      case 1:
+                          cout<<BOLDWHITE<<"\nNacional: \n 1)Mexico ($1,100) \n 2)Los Cabos ($ 2,000) \n 3)Monterrey ($ 1,100) \n 4)Cancun ($ 2,000) \n Opción: ";
+                          cin>>Respuesta;
+                          switch (Respuesta)
+                          {
+                              case 1:
+                                  cout<<"\n¿Cuántos boletos quieres? ";
+                                  cin>>Boletos;
+                                  if (Boletos !=0){
+                                    Costo = Boletos * 1100;
+                                    cout<<BOLDBLUE<<" El costo de boletos será de $"<<Costo<<BOLDWHITE<<endl;
+                                    cout<<"¿Cuenta con un cupón de descuento? Responde 1-10%, 2-20%, 3-30% 4-No aplica \nOpción: ";
+                                    cin>>Cupon;
+                                    switch (Cupon)
+                                    {
+                                        case 1:
+                                            CostoVuelo = Costo * .90;
+                                            break;
+                                        case 2:
+                                            CostoVuelo = Costo * .80;
+                                            break;
+                                        case 3:
+                                            CostoVuelo = Costo * .70;
+                                            break;
+                                        case 4:
+                                            CostoVuelo = Costo;
+                                            break;
+                                        default:
+                                            cout<<BOLDRED<<"ESTA OPCION NO EXISTE"<<BOLDWHITE<<endl;
+                                            break;
+                                    }
+                                    cout<<BOLDBLUE<<"El costo total del vuelo es de "<<CostoVuelo<<BOLDWHITE<<endl;
+                                  }
+                                  Suma = Suma + CostoVuelo;
+                                  break;
+                              case 2:
+                                  cout<<"\n¿Cuántos boletos quieres? ";
+                                  cin>>Boletos;
+                                  if (Boletos !=0){
+                                    Costo = Boletos * 2000;
+                                    cout<<BOLDBLUE<<" El costo de boletos será de $"<< Costo<<BOLDWHITE<<endl;
+                                    cout<<"¿Cuenta con un cupón de descuento? Responde 1-10%, 2-20%, 3-30% 4-No aplica \nOpción: ";
+                                    cin>>Cupon;
+                                    switch (Cupon)
+                                    {
+                                        case 1:
+                                            CostoVuelo = Costo * .90;
+                                            break;
+                                        case 2:
+                                            CostoVuelo = Costo * .80;
+                                            break;
+                                        case 3:
+                                            CostoVuelo = Costo * .70;
+                                            break;
+                                        case 4:
+                                            CostoVuelo = Costo;
+                                            break;
+                                        default:
+                                            cout<<BOLDRED<<"ESTA OPCION NO EXISTE"<<BOLDWHITE<<endl;
+                                            break;
+                                    }
+                                    cout<<BOLDBLUE<<"El costo total del vuelo es de $"<< CostoVuelo<<BOLDWHITE<<endl;
+                                  }
+                                  Suma = Suma + CostoVuelo;
+                                  break;
+                              case 3:
+                                  cout<<"\n¿Cuántos boletos quieres? ";
+                                  cin>>Boletos;
+                                  if (Boletos !=0){
+                                    Costo = Boletos * 1100;
+                                    cout<<BOLDBLUE<<" El costo de boletos será de $"<< Costo<<BOLDWHITE<<endl;
+                                    cout<<"¿Cuenta con un cupón de descuento? Responde 1-10%, 2-20%, 3-30% 4-No aplica \nOpcion: ";
+                                    cin>>Cupon;
+                                    switch (Cupon)
+                                    {
+                                        case 1:
+                                            CostoVuelo = Costo * .90;
+                                            break;
+                                        case 2:
+                                            CostoVuelo = Costo * .80;
+                                            break;
+                                        case 3:
+                                            CostoVuelo = Costo * .70;
+                                            break;
+                                        case 4:
+                                            CostoVuelo = Costo;
+                                            break;
+                                        default:
+                                            cout<<BOLDRED<<"ESTA OPCION NO EXISTE"<<BOLDWHITE<<endl;
+                                            break;
+                                    }
+                                    cout<<BOLDBLUE<<"El costo total del vuelo es de $"<< CostoVuelo<<BOLDWHITE<<endl;
+                                  }
+                                  Suma = Suma + CostoVuelo;
+                                  break;
+                              case 4:
+                                  cout<<"\n¿Cuántos boletos quieres? ";
+                                  cin>>Boletos;
+                                  if (Boletos !=0){
+                                    Costo = Boletos * 2000;
+                                    cout<<BOLDBLUE<<" El costo de boletos será de $"<< Costo<<BOLDWHITE<<endl;
+                                    cout<<"¿Cuenta con un cupón de descuento? Responde 1-10%, 2-20%, 3-30% 4-No aplica \nOpcion: ";
+                                    cin>>Cupon;
+                                    switch (Cupon)
+                                    {
+                                        case 1:
+                                            CostoVuelo = Costo * .90;
+                                            break;
+                                        case 2:
+                                            CostoVuelo = Costo * .80;
+                                            break;
+                                        case 3:
+                                            CostoVuelo = Costo * .70;
+                                            break;
+                                        case 4:
+                                            CostoVuelo = Costo;
+                                            break;
+                                        default:
+                                            cout<<BOLDRED<<"ESTA OPCION NO EXISTE"<<BOLDWHITE<<endl;
+                                            break;
+                                    }
+                                    cout<<BOLDBLUE<<"El costo total del vuelo es de $"<< CostoVuelo<<BOLDWHITE<<endl;
+                                  }
+                                  Suma = Suma + CostoVuelo;
+                                  break;
+                              default:
+                                  cout<<BOLDRED<<"ESTA OPCION NO EXISTE"<<BOLDWHITE<<endl;
+                          }
+                          break;
+                      case 2:
+                          cout<<"\nInternacional: \n 1)Paris ($ 14,000) \n 2)Nueva York ($ 8,000) \n 3)Egipto ($17,000) \n 4)Australia ($ 22,000) \n Opción: ";
+                          cin>>Respuesta;
+                          switch (Respuesta)
+                          {
+                              case 1:
+                                  cout<<"\n¿Cuántos boletos quieres? ";
+                                  cin>>Boletos;
+                                  if (Boletos !=0){
+                                    Costo = Boletos * 14000;
+                                    cout<<BOLDBLUE<<" El costo de boletos será de $"<< Costo<<BOLDWHITE <<endl;
+                                    cout<<"¿Cuenta con un cupón de descuento? Responde 1-10%, 2-20%, 3-30% 4-No aplica \nOpcion: ";
+                                    cin>>Cupon;
+                                    switch (Cupon)
+                                    {
+                                        case 1:
+                                            CostoVuelo = Costo * .90;
+                                            break;
+                                        case 2:
+                                            CostoVuelo = Costo * .80;
+                                            break;
+                                        case 3:
+                                            CostoVuelo = Costo * .70;
+                                            break;
+                                        case 4:
+                                            CostoVuelo = Costo;
+                                            break;
+                                        default:
+                                            cout<<BOLDRED<<"ESTA OPCION NO EXISTE"<<BOLDWHITE<<endl;
+                                            break;
+                                    }
+                                    cout<<BOLDBLUE<<"El costo total del vuelo es de $"<<CostoVuelo<<BOLDWHITE<<endl;
+                                  }
+                                  Suma = Suma + CostoVuelo;
+                                  break;
+
+                              case 2:
+                                  cout<<"\n¿Cuántos boletos quieres? ";
+                                  cin>>Boletos;
+                                  if (Boletos !=0){
+                                    Costo = Boletos * 8000;
+                                    cout<<BOLDBLUE<<" El costo de boletos será de $"<<Costo<<BOLDWHITE<<endl;
+                                    cout<<"¿Cuenta con un cupón de descuento? Responde 1-10%, 2-20%, 3-30% 4-No aplica \nOpción: ";
+                                    cin>>Cupon;
+                                    switch (Cupon)
+                                    {
+                                        case 1:
+                                            CostoVuelo = Costo * .90;
+                                            break;
+                                        case 2:
+                                            CostoVuelo = Costo * .80;
+                                            break;
+                                        case 3:
+                                            CostoVuelo = Costo * .70;
+                                            break;
+                                        case 4:
+                                            CostoVuelo = Costo;
+                                            break;
+                                        default:
+                                            cout<<BOLDRED<<"ESTA OPCION NO EXISTE"<<BOLDWHITE<<endl;
+                                            break;
+                                    }
+                                    cout<<BOLDBLUE<<"El costo total del vuelo es de $"<<CostoVuelo<<BOLDWHITE<<endl;
+                                  }
+                                  Suma = Suma + CostoVuelo;
+                                  break;
+                              case 3:
+                                  cout<<"\n¿Cuántos boletos quieres? ";
+                                  cin>>Boletos;
+                                  if (Boletos !=0){
+                                    Costo = Boletos * 17000;
+                                    cout<<BOLDBLUE<<" El costo de boletos será de $"<< Costo<<BOLDWHITE<<endl;
+                                    cout<<"¿Cuenta con un cupón de descuento? Responde 1-10%, 2-20%, 3-30% 4-No aplica \nOpción: ";
+                                    cin>>Cupon;
+                                    switch (Cupon)
+                                    {
+                                        case 1:
+                                            CostoVuelo = Costo * .90;
+                                            break;
+                                        case 2:
+                                            CostoVuelo = Costo * .80;
+                                            break;
+                                        case 3:
+                                            CostoVuelo = Costo * .70;
+                                            break;
+                                        case 4:
+                                            CostoVuelo = Costo;
+                                            break;
+                                        default:
+                                            cout<<BOLDRED<<"ESTA OPCION NO EXISTE"<<BOLDWHITE<<endl;
+                                            break;
+                                    }
+                                    cout<<BOLDBLUE<<"El costo total del vuelo es de $"<< CostoVuelo<<BOLDWHITE<<endl;
+                                  }
+                                  Suma = Suma + CostoVuelo;
+                                  break;
+                              case 4:
+                                  cout<<"\n¿Cuántos boletos quieres? ";
+                                  cin>>Boletos;
+                                  if (Boletos !=0){
+                                    Costo = Boletos * 22000;
+                                    cout<<BOLDBLUE<<" El costo de boletos será de $"<< Costo<<BOLDWHITE<<endl;
+                                    cout<<"¿Cuenta con un cupón de descuento? Responde 1-10%, 2-20%, 3-30% 4-No aplica \n Opción: ";
+                                    cin>>Cupon;
+                                    switch (Cupon)
+                                    {
+                                        case 1:
+                                            CostoVuelo = Costo * .90;
+                                            break;
+                                        case 2:
+                                            CostoVuelo = Costo * .80;
+                                            break;
+                                        case 3:
+                                            CostoVuelo = Costo * .70;
+                                            break;
+                                        case 4:
+                                            CostoVuelo = Costo;
+                                            break;
+                                        default:
+                                            cout<<BOLDRED<<"ESTA OPCION NO EXISTE"<<BOLDWHITE<<endl;
+                                            break;
+                                    }
+                                    cout<<BOLDBLUE<<"El costo total del vuelo es de $"<<CostoVuelo<<BOLDWHITE<<endl;
+                                  }
+                                  Suma = Suma + CostoVuelo;
+                                  break;
+                              default:
+                                  cout<<BOLDRED<<"ESTA OPCION NO EXISTE"<<BOLDWHITE<<endl;
+                          }
+                          break;
+                      case 3:
+                          break;
+                      default:
+                          cout<<BOLDRED<<"ESTA OPCION NO EXISTE"<<BOLDWHITE<<endl;
+                          break;
+                  }
+
+              } while (Resp != 3);
+              break;
+
+          case 2:
+              do
+              {
+                  cout<<"\nLos Hoteles disponibles son: \n 1)Camino Real ($ 8,000) \n 2)Holiday Inn ($ 3,500) \n 3)Cid Resort ($ 2,300) \n 4)City Express ($ 1,500) \n 5)SALIR \n Opción: ";
+                  cin>>Hotel;
+                  switch (Hotel)
+                  {
+                      case 1:
+                          cout<<"\n¿Cuántas personas se van a hospedar? ";
+                          cin>>Personas;
+                          if (Personas % 2 == 0)
+                          {
+                              Habitaciones = Personas / 2;
+                          }
+                          else
+                          {
+                              Habitaciones = (Personas + 1) / 2;
+                              cout<<"\n\nA pesar de que son "<< Personas << " personas, la habitacion cuenta por dos y se cobra completa"<<endl;
+                          }
+                          CostoHabitacion = Habitaciones * 8000;
+                          cout<<BOLDBLUE<<"El costo total de las habitaciones es: $"<<CostoHabitacion<<BOLDWHITE<<endl;
+                          hotelito=1;
+                          break;
+                      case 2:
+                          cout<<"\n¿Cuántas personas se van a hospedar? ";
+                          cin>>Personas;
+                          if (Personas % 2 == 0)
+                          {
+                            Habitaciones = Personas / 2;
+                          }
+
+                          else
+                          {
+                              Habitaciones = (Personas + 1) / 2;
+                              cout<<"\n\nA pesar de que son "<<Personas<<" personas, la habitacion cuenta por dos y se cobra completa"<<endl;
+                          }
+                          CostoHabitacion = Habitaciones * 3500;
+                          cout<<BOLDBLUE<<"El costo total de las habitaciones es: $"<< CostoHabitacion<<BOLDWHITE<<endl;
+                          hotelito=2;
+                          break;
+                      case 3:
+                          cout<<"\n¿Cuántas personas se van a hospedar? ";
+                          cin>>Personas;
+                          if (Personas % 2 == 0)
+                          {
+                              Habitaciones = Personas / 2;
+                          }
+                          else
+                          {
+                              Habitaciones = (Personas + 1) / 2;
+                              cout<<"\n\nA pesar de que son "<< Personas <<" personas, la habitacion cuenta por dos y se cobra completa"<<endl;
+                          }
+                          CostoHabitacion = Habitaciones * 2300;
+                          cout<<BOLDBLUE<<"El costo total de las habitaciones es: $"<< CostoHabitacion<<BOLDWHITE <<endl;
+                          hotelito=3;
+                          break;
+                      case 4:
+                          cout<<"\n¿Cuántas personas se van a hospedar? ";
+                          cin>>Personas;
+                          if (Personas % 2 == 0)
+                          {
+                              Habitaciones = Personas / 2;
+                          }
+                          else
+                          {
+                              Habitaciones = (Personas + 1) / 2;
+                              cout<<"\n\nA pesar de que son "<<Personas<< " personas, la habitacion cuenta por dos y se cobra completa"<<endl;
+                          }
+                          CostoHabitacion = Habitaciones * 1500;
+                          cout<<BOLDBLUE<<"El costo total de las habitaciones es: $"<< CostoHabitacion<<BOLDWHITE<<endl;
+                          hotelito=4;
+                          break;
+                      case 5:
+                          break;
+                      default:
+                          cout<<BOLDRED<<"NO EXISTE ESTA OPCION"<<BOLDWHITE<<endl;
+                          break;
+                  }
+              } while (Hotel != 5);
+              break;
+          case 3:
+              do
+              {
+                  switch (hotelito)
+                  {
+                      case 1:
+                          cout<<"\nLos precios del paquete por persona en el Hotel Camino Real son:\n 1)Desayuno ($ 170) \n 2)Desayuno y cena ($ 220) \n 3)Todo Incluido ($ 450) \n 4)SALIR \n Opción: ";
+                          cin>>Desayuno;
+                          if(Desayuno !=4 ){
+                            if(Desayuno==1||Desayuno==2 || Desayuno==3)
+                            {
+                              cout<<"¿Cuántas personas quieren este paquete de comida? ";
+                              cin>>People;
+                              switch (Desayuno)
+                              {
+                                  case 1:
+                                      TotalDesayuno = People * 170;
+                                      cout<<BOLDBLUE<<"El costo total del paquete es: $"<< TotalDesayuno<<BOLDWHITE<<endl;
+                                      break;
+                                  case 2:
+                                      TotalDesayuno = People * 220;
+                                      cout<<BOLDBLUE<<"El costo total del paquete es: $"<< TotalDesayuno<<BOLDWHITE<<endl;
+                                      break;
+                                  case 3:
+                                      TotalDesayuno = People * 450;
+                                      cout<<BOLDBLUE<<"El costo total del paquete es: $"<< TotalDesayuno<<BOLDWHITE<<endl;
+                                      break;
+                              }
+                            }
+                            cout<<BOLDRED<<"NO EXISTE ESTA OPCION"<<BOLDWHITE<<endl;
+                          }
+                          break;
+                      case 2:
+                          cout<<"\nLos precios del paquete por persona en el Hotel Holiday inn son:\n 1)Desayuno ($ 150) \n 2)Desayuno y cena ($ 250) \n 3)Todo Incluido ($ 400) \n 4)SALIR \n Opción:  ";
+                          cin>>Desayuno;
+                          if(Desayuno !=4 ){
+                            if(Desayuno==1||Desayuno==2 || Desayuno==3)
+                            {
+                              cout<<"¿Cuántas personas quieren este paquete de comida? ";
+                              cin>>People;
+                              switch (Desayuno)
+                              {
+                                  case 1:
+                                      TotalDesayuno = People * 150;
+                                      cout<<BOLDBLUE<<"El costo total del paquete es: $"<< TotalDesayuno<<BOLDWHITE<<endl;
+                                      break;
+                                  case 2:
+                                      TotalDesayuno = People * 250;
+                                      cout<<BOLDBLUE<<"El costo total del paquete es: $"<< TotalDesayuno<<BOLDWHITE<<endl;
+                                      break;
+                                  case 3:
+                                      TotalDesayuno = People * 400;
+                                      cout<<BOLDBLUE<<"El costo total del paquete es: $"<< TotalDesayuno<<BOLDWHITE<<endl;
+                                      break;
+                              }
+                            }
+                            cout<<BOLDRED<<"NO EXISTE ESTA OPCION"<<BOLDWHITE<<endl;
+                          }
+                          break;
+                      case 3:
+                          cout<<"\nLos precios del paquete por persona en el Hotel Cid Resorts son: \n 1)Desayuno ($ 200) \n 2)Desayuno y cena ($ 350) \n 3)Todo Incluido ($ 500) \n 4)SALIR \n Opción: ";
+                          cin>>Desayuno;
+                          if(Desayuno !=4 )  {
+                            if(Desayuno==1||Desayuno==2 || Desayuno==3)
+                            {
+                              cout<<"¿Cuántas personas quieren este paquete de comida? ";
+                              cin>>People;
+                              switch (Desayuno)
+                              {
+                                  case 1:
+                                      TotalDesayuno = People * 200;
+                                      cout<<BOLDBLUE<<"El costo total del paquete es: $ "<< TotalDesayuno<<BOLDWHITE<<endl;
+                                      break;
+                                  case 2:
+                                      TotalDesayuno = People * 350;
+                                      cout<<BOLDBLUE<<"El costo total del paquete es: $ "<< TotalDesayuno<<BOLDWHITE<<endl;
+                                      break;
+                                  case 3:
+                                      TotalDesayuno = People * 500;
+                                      cout<<BOLDBLUE<<"El costo total del paquete es: $ "<< TotalDesayuno<<BOLDWHITE<<endl;
+                                      break;
+                              }
+                            }
+                            cout<<BOLDRED<<"NO EXISTE ESTA OPCION"<<BOLDWHITE<<endl;
+                          }
+                          break;
+                      case 4:
+                          cout<<"\nLos precios del paquete por persona en el Hotel City express son: \n 1)Desayuno ($ 70) \n 2)Desayuno y cena ($ 150) \n 3)Todo Incluido ($ 350) \n 4)SALIR \n Opción: ";
+                          cin>>Desayuno;
+                          if(Desayuno !=4 )  {
+                            if(Desayuno==1||Desayuno==2 || Desayuno==3)
+                            {
+                              cout<<"¿Cuántas personas quieren este paquete de comida? ";
+                              cin>>People;
+                              switch (Desayuno)
+                              {
+                                  case 1:
+                                      TotalDesayuno = People * 70;
+                                      cout<<BOLDBLUE<<"El costo total del paquete es: $"<< TotalDesayuno<<BOLDWHITE<<endl;
+                                      break;
+                                  case 2:
+                                      TotalDesayuno = People * 150;
+                                      cout<<BOLDBLUE<<"El costo total del paquete es: $"<< TotalDesayuno<<BOLDWHITE<<endl;
+                                      break;
+                                  case 3:
+                                      TotalDesayuno = People * 350;
+                                      cout<<BOLDBLUE<<"El costo total del paquete es: $"<< TotalDesayuno<<BOLDWHITE<<endl;
+                                      break;
+                              }
+                            }
+                            cout<<BOLDRED<<"NO EXISTE ESTA OPCION"<<BOLDWHITE<<endl;
+                          }
+                          break;
+                      case 5:
+                          break;
+                      default:
+                          cout<<BOLDRED<<"DEBES ESCOGER PRIMERO EL HOTEL PARA PODER MOSTRAR EL MENÚ DE DESAYUNOS"<<BOLDWHITE<<endl;
+                          Desayuno=4;
+                          break;
+                  }
+              } while (Desayuno != 4);
+              break;
+          case 4:
+              cout<<BOLDBLUE<<"El numero de boletos para volar son " <<Boletos<< " y el total en vuelos es $"<< Suma<<endl;
+              cout<<"El numero de personas en el hotel son "<< Personas <<", las habitaciones son "<<Habitaciones;
+              cout<<" y el total en hospedaje es $"<< CostoHabitacion<<endl;
+              cout<<"El numero de personas para las comidas son "<< People << " y el total en los paquetes de comidas es $" << TotalDesayuno<<endl;
+              IngresosTotales = CostoVuelo + CostoHabitacion + TotalDesayuno;
+              cout<<"El total de ingresos de la empresa es $"<<IngresosTotales<<BOLDWHITE<<endl;
+              break;
+          case 5:
+              break;
+          default:
+              cout<<BOLDRED<<"ESA OPCION NO EXISTE"<<BOLDWHITE<<endl;
+              break;
+      }
+
+  } while (Querer != 5);
+  cout<<"Gracias por visitarnos vuelve pronto"<<endl;
+  return 0;
+
+}
