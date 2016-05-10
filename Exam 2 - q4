@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+bool isPalindrome (string n){
+	return (n== string(n.rbegin(), n.rend()));
+}
+
+int main(){
+	string n;
+	cout<<"Palndromos"<<endl;
+	cout<<"Escriba una palabra o frase (sin espacios), el programa te dira si es palindromo o no, lo que escribiste: ";
+	cin>>n;
+	bool y=isPalindrome(n);
+	if (y==true){
+		cout<<"Es palindromo"<<endl;
+	}
+	else {
+		cout<<"No es un palindromo"<<endl;
+	}
+	cout<< "Realizado por Daniel Amaro  A01631334    ;o"<<endl; 
+	return 0;
+}
