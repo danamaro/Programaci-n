@@ -1,0 +1,40 @@
+#include <iostream>
+#include <cmath>
+#include <limits>
+using namespace std;
+
+
+int dot_product(int lista1[], int lista2[], int numero)
+{
+int suma=0;
+for (int i=0; i < numero; i++)
+{suma=suma + (lista1[i]*lista2[i]);}
+
+return suma;
+}
+
+
+
+int main ()
+{
+int numero;
+cout<<"tamaño de la lista (de un numero): ";
+cin>>numero;
+int suma, lista1[numero], lista2[numero];
+
+for (int i=0; i < numero; i++)
+{
+cout<<"Selecciona el "<<i+1<<" numero de la primer lista: ";
+cin>>lista1[i];
+}
+cout<<endl;
+for (int i=0; i < numero; i++)
+{
+cout<<"Selecciona el "<<i+1<<" numero de la segunda lista: ";
+cin>>lista2[i];
+}
+cout<<endl;
+suma=dot_product (lista1, lista2, numero);
+cout<<"El producto punto de los vectores dados es: "<<suma;
+return 0;
+}
