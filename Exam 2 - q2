@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+long superpower (long b, long p){
+long resultado = 1;
+
+for (long i=1; i<=p; i++)
+	resultado = resultado * b;
+return resultado;
+}
+
+int main(){
+	long base;
+	long potencia;
+	cout<<"Ingresa la base: ";
+	cin>>base;
+	
+	cout<<"Ingresa la potencia:" ;
+	cin>>potencia;
+	
+	cout<<"Resultado: "<<superpower(base, potencia)<<endl;
+	cout<< "Realizado por Daniel Amaro  A01631334    ;o"<<endl; 
+	return 0;
+}
